@@ -150,6 +150,20 @@ public class UsuarioControllerTeste {
 	@DisplayName("Logar")
 	public void deveLogar() {
 		
+		usuarioService.cadastrarUsuario(
+				new Usuario(0L, "Aurinha", "aurinha@root.com", 
+						"12345678", "link.foto.com/12345"));
+		
+		 HttpEntity<UsuarioLogin> corpoRequisicao = new HttpEntity<UsuarioLogin>(
+	                new UsuarioLogin(0L, "", "aurinha@root.com", 
+							"12345678", "", ""));
+
+
+	        ResponseEntity<UsuarioLogin> corpoResposta = testRestTemplate
+	        		.exchange("/usuarios/logar", HttpMethod.POST,
+	                corpoRequisicao, UsuarioLogin.class);
+
+	        assertEquals(HttpStatus.OK, corpoResposta.getStatusCode());
 	}
 		
 		
