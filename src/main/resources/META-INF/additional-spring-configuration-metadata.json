@@ -1,5 +1,0 @@
-{"properties": [{
-  "name": "springdoc.swagger-ui.operationsSorter",
-  "type": "java.lang.String",
-  "description": "A description for 'springdoc.swagger-ui.operationsSorter'"
-}]}
