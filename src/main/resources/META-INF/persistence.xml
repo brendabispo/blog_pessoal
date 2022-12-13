@@ -6,6 +6,10 @@
  <persistence-unit name="jpa_hibernate_db -pu" transaction-type="RESOURCE_LOCAL">
  <provider>org.hibernate.ejb.HibernatePersistence</provider>
  
+ <class>com.generation.blogpessoal.model.Postagem</class>
+ <class>com.generation.blogpessoal.model.Tema</class>
+ <class>com.generation.blogpessoal.model.Usuario</class>
+ 
  
  <properties>
  <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
