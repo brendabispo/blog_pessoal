@@ -5,6 +5,7 @@
  
  <persistence-unit name="jpa_hibernate_db -pu" transaction-type="RESOURCE_LOCAL">
  <provider>org.hibernate.ejb.HibernatePersistence</provider>
+ <jar-file>maven-wrapper.jar</jar-file>
  
  <class>com.generation.blogpessoal.model.Postagem</class>
  <class>com.generation.blogpessoal.model.Tema</class>
